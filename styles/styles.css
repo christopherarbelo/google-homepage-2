@@ -10,12 +10,14 @@ html {
 body {
     background-color: grey;
     background: var(--google-grey, grey);
+    min-height: 500px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    font-size: 13px;
 }
 
 a {
@@ -35,6 +37,11 @@ a:hover {
     margin-right: 2%;
 }
 
+nav .section-right {
+    width: 200px;
+    justify-content: space-between;
+}
+
 nav section {
     display: flex;
     align-items: center;
@@ -49,16 +56,25 @@ nav section ul>* {
     margin: 0 5px;
 }
 
-main {
-    margin-bottom: 40px;
+button#apps {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background: url("../images/sprite.png") 26.5% 98%;
 }
 
 #sign-in {
     background: rgb(66, 133, 244);
     color: white;
     border: 1px solid rgb(66, 133, 244);
-    border-radius: 1px;
+    border-radius: 2px;
     padding: 5px 10px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+#sign-in:hover {
+    background-color: rgb(47, 97, 179);
 }
 
 #logo {
@@ -69,7 +85,7 @@ main {
 form#search {
     display: flex;
     flex-wrap: wrap;
-    width: 36vw;
+    width: 40vw;
     margin: 0 auto;
     justify-content: center;
 }
@@ -79,9 +95,10 @@ form#search input[type="search"] {
     height: 45px;
     border: 1px solid #dfe1e5;
     border-radius: 25px;
-    padding: 0 15px;
+    padding: 0 20px;
     margin-bottom: 22px;
     margin-top: 10px;
+    font-size: 20px;
 }
 
 form#search input[type="search"]:hover {
@@ -108,6 +125,7 @@ form#search button {
 form#search button:hover {
     color: #222;
     border: 1px solid #c6c6c6;
+    cursor: pointer;
 }
 
 footer {
@@ -128,4 +146,8 @@ footer section ul {
 
 footer section ul > * {
     margin: 0 10px;
+}
+
+footer a {
+    color: #5f6368;
 }
