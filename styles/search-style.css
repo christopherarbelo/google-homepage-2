@@ -1,7 +1,8 @@
 :root {
     --link-grey: #5f6368;
-    --link-blue: rgb(26, 13, 171);
+    --link-blue: #1a0dab;
     --google-blue: #1A73E8;
+    --google-border-grey: #dfe1e5;
 }
 
 html {
@@ -156,7 +157,7 @@ main section p {
 }
 
 .snippet {
-    border: 1px solid var(--link-grey, grey);
+    border: 1px solid var(--google-border-grey, grey);
     border-radius: 10px;
     padding: 15px;
 }
@@ -187,4 +188,74 @@ main section p {
     margin-top: 5px;
     font-size: 14px;
     color: var(--link-grey, grey);
+}
+
+section.videos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20px 250px;
+    width: 440px;
+    grid-gap: 16px;
+}
+
+.video-container {
+    border: 1px solid var(--google-border-grey, grey);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-container .thumbnail {
+    width: 100%;
+    height: 118px;
+    background-color: green;
+}
+
+.video-container figcaption {
+    color: var(--link-blue, blue);
+    font-size: 16px;
+    padding: 10px 10%;
+}
+
+.video-container figcaption:hover {
+    text-decoration: underline;
+}
+
+.video-container .meta-info {
+    padding: 10px 10%;
+    position: absolute;
+    bottom: 0px;
+    font-size: 14px;
+}
+
+.meta-info .channel {
+    color: var(--link-grey, grey);
+}
+
+.meta-info .platform {
+    margin-top: 5px;
+    display: block;
+    color: #0b660b;
+    font-weight: bold;
+}
+
+section.videos h2 {
+    grid-area: 1 / 1 / 2 / 3;
+    font-size: 20px;
+}
+
+.video-1 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.video-1 .thumbnail {
+    background: url("../images/video-thumbnails/vid-1.jpg") 0px 0px;
+}
+
+.video-2 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.video-2 .thumbnail {
+    background: url("../images/video-thumbnails/vid-2.jpg") -1px -1px;
 }
